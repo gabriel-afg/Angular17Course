@@ -35,11 +35,7 @@ export class CreateComponent {
     this.ProductsService.create({
       title: this.form.controls.title.value
     }).subscribe(() => {
-      this.matSnackBar.open('Product created', 'Close', {
-        duration: 2000,
-        horizontalPosition: 'left',
-        verticalPosition: 'bottom'
-      });
+      this.matSnackBar.open('Product created', 'Close');
 
       this.router.navigate(['/']);
     })
